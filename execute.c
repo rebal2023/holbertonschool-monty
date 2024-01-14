@@ -20,7 +20,6 @@ instruction_t opcode_func[] = {
 {"sub", op_sub},
 {"div", op_div},
 {"mul", op_mul},
-{"mod", op_mod},
 {NULL, NULL},
 };
 
@@ -35,7 +34,7 @@ i++;
 }
 fprintf(stderr, "L%u: unknown instruction %s\n", var.n_lines, op_code);
 free(var.getl_info);
-handle_dlist_head(var.stack_head);
+freehead(var.stack_head);
 fclose(var.fp_struct);
 exit(EXIT_FAILURE);
 }

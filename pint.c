@@ -14,7 +14,7 @@ if ((*stack) == NULL)
 fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
 free(var.getl_info);
 fclose(var.fp_struct);
-handle_dlist_head((*stack));
+freehead((*stack));
 exit(EXIT_FAILURE);
 }
 
